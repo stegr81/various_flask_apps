@@ -1,0 +1,96 @@
+header{
+	margin: 1px;
+	border:1px solid #000;
+	border-radius:10px;
+	background-color: #bbb;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.center{
+	line-height:100px;
+	height:100px;
+	text-align:center;
+}
+
+.center-map{
+	line-height:300px;
+	height:300px;
+	text-align:center;
+}
+
+body{
+	background-image: linear-gradient(#222,#888);
+	padding:1px;
+}
+
+.main_body{
+	text-align:center;
+	margin: 10px;
+	padding:5px;
+	border-radius: 5px;
+	background: url('/static/IMG.JPG');
+	background-size: 200%;
+	background-repeat:no-repeat;
+	border-radius: 5px;
+	text-align: left;
+	word-wrap:break-word;
+}
+
+#central{
+	background-image:none;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 5px;
+	background-color: #666;
+	word-wrap: break-word;
+}
+
+#home_central{
+	background-image:none;
+	width:500px;
+	margin:auto;
+	padding:5px;
+	background-color: #ddd;
+	word-wrap: break-word;
+}
+
+container {
+	display: grid;
+	grid-template-columns:auto auto;
+}
+
+p.summary{
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
+	color: white;
+	}
+
+h1{
+	font-family: Lucida Console, Courier, monospace; 
+	color:#000;
+	letter-spacing:3px;
+	word-spacing:10px;
+}
+
+header-title{
+	color:#000;
+}
+
+h3{
+	font-family: Lucida Console, Courier, monospace;
+	color: #000;
+	}
+	
+a:link{
+	color:yellow;
+	text-decoration:none;
+}
+
+a:visited{
+	color:yellow;
+	text-decoration:none;
+}
+
+a:hover{
+	background-color:blue;
+}
