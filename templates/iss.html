@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+	<head>
+		<title>{{title}}</title>
+		<link rel="stylesheet" href="/static/style.css" type="text/css"/>
+		<meta name="format-detection" content="telephone=no"/>
+	</head>
+	<body>
+		<br><header class = ".center">
+			<h1>Localised ISS Information</h1>
+		</header>
+		<br>
+		<div class = "main_body">
+			<div id="central">
+				<p class="summary">
+				The time is {{ now }} and ISS is currently at
+				latitude {{ issLat }}, longitude {{ issLon }}<br>
+			</div>
+			<container>
+				<div id="central">
+					<p class = "summary">
+						Your approximate location has been identified from your IP address, provided 		you're not accessing via any proxy service.<br><br>
+						Latitude {{ userLat }}, Longitude {{ userLon }}<br><br>
+						Your location has been labelled on the map. To see the map and the current location of the
+						ISS, <a href = "/map">follow this link.</a> Just click back to return to this page. Refresh the map to see contantly updated positions.<br><br>
+				</div>
+				<div id = "central">
+					<p class = "summary">
+						The weather at your location is currently {{ description }} with a temperature of {{ temp }} deg Celsius.
+					</p>
+				</div>
+			</container>
+			<div id = "central">
+				<p class = "summary">
+					Please note that the pass times provided are in UTC (GMT), consider daylight savings when planning your observations.<br><br>
+					{{ passes }}
+				</p>
+			</div>
+			<div id="central">
+				{{ map | safe }}
+			</div>
+		</div>
+	</body>
+</html>

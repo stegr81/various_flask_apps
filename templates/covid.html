@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+	<head>
+		<title>{{title}}</title>
+		<link rel="stylesheet" href="/static/style.css" type="text/css"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<!--<meta name = "viewport" content="width=device-width, initial-scale=1.0"/>--!>
+	</head>
+	<body>
+		<br><header class = ".center">
+			<h1>COVID-19 Data Comparison</h1>
+		</header>
+		<br>
+		<div class = "main_body">
+		<div id = "central">
+			<p class = "summary">
+				This page will allow chart based analysis of current, global COVID-19 data. Options are:				<ul>
+					<li>Zero Day Scatter plot which shows number of cases since the day of the first confirmed case in a given country.</li>
+					<li>Daily Cases bar chart showing incidence of new confirmed cases per day by country</li>
+					<li>Choropleth map, coloured based on deaths</li>
+				</ul>
+				
+				<p class = "summary">Death per million population currently not working.<br>
+				
+				For all but Choropleth, where no input is required, simply enter the names of the countries you wish to analyse as comma separated values in the text box. Mis-spellings will cause errors.<br></p>
+				</div>
+				
+		
+		<div id = "central">
+			<form method="POST">
+    		<textarea name = list rows="2" cols="100" placeholder="Enter a list of comma separated countries."></textarea>
+			<br>
+			<select name= options method="GET" action="/covid" >
+        	{% for options in options %}
+        	<option value= "{{ options }}" SELECTED>{{ options }}</option>"
+        	{% endfor %}
+    		</select>
+			<input type = "submit">
+		</div>
+			
+				{% if div_placeholder %}
+            	<div id = "central">	
+				{{ div_placeholder }}
+				</div>
+				{% endif %}
+			</form>
+			</div> 
+</body>
+ 
+</html>
