@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import plotly.graph_objects as go
 from plotly.offline import plot
 import plotly.express as px
+import requests
 
 
 class covid():
