@@ -1,7 +1,9 @@
 import os
+
+import pip
 #sudo pip install plotly===4.6.0
 # ! pip install plotly-geo
-#os._exit(00)
+#os	._exit(00)
 
 from flask import Flask, render_template, Markup, request
 #import requests
