@@ -23,7 +23,7 @@ class iss():
 		return passes
 
 	def map_maker(self, issLat, issLon, userLat, userLon):
-		map = folium.Map(location=[15, 0],zoom_start=1.5)
+		map = folium.Map(location=[15, 0],zoom_start=3, scrollWheelZoom=False)
 		folium.Marker([issLat,issLon], icon=folium.Icon(icon='cloud')).add_to(map)
 		folium.Marker([userLat,userLon]).add_to(map)
 		return map._repr_html_()
