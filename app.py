@@ -1,12 +1,8 @@
+# run the following from the command line
+# pip install -r requirements.txt
 import os
 
-import pip
-#sudo pip install plotly===4.6.0
-# ! pip install plotly-geo
-#os	._exit(00)
-
 from flask import Flask, render_template, Markup, request
-#import requests
 
 import requests, json
 from datetime import datetime
@@ -20,14 +16,14 @@ import plotly.express as px
 
 
 import station
-import virus
+#import virus
 
-resp = requests.get('https://pomber.github.io/covid19/timeseries.json').json()
-resp['United States'] = resp.pop('US')
+#resp = requests.get('https://pomber.github.io/covid19/timeseries.json').json()
+#resp['United States'] = resp.pop('US')
 
 
 iss=station.iss()
-covid=virus.covid()
+#covid=virus.covid()
 
 app=Flask(__name__,static_url_path='/static')
 @app.route('/iss')
@@ -41,10 +37,13 @@ def station():
 def index():
 	return render_template('index.html')
 	
+#The Covid analysis elements of this Flask have been removed due to the loss of the data source
+
 @app.route('/covid')
 def covtracker(div_placeholder = None):
 	options = ['Zero Day Scatter', 'Choropleth', 'Daily Cases', 'Deaths per Million Population', 'Choropleth']
 	return render_template('covid.html', options = options, div_placeholder=div_placeholder)
+
 
 @app.route('/covid', methods = ['POST'])
 def choices():

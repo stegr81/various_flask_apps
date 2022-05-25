@@ -1,0 +1,5 @@
+flask
+plotly===4.6.0
+plotly-geo
+requests
+bs4
